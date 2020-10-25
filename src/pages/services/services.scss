@@ -1,0 +1,84 @@
+@import "../../styles/base.scss";
+
+@import "../../components/header.scss";
+@import "../../components/footer.scss";
+
+@import "../../components/button.scss";
+@import "../../components/logo/logo.scss";
+@import "../../components/contacts/contacts.scss";
+@import "../../components/menu/menu.scss";
+@import "../../components/socials/socials.scss";
+@import "../../components/breadcrumbs/breadcrumbs.scss";
+@import "../../components/service/service.scss";
+@import "../../components/pagination/pagination.scss";
+
+.top-line {
+  min-height: 415px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 26px;
+  padding-bottom: 27px;
+  background: #202123 url('images/bg/lion-head-wide.jpg') right 28% bottom no-repeat;
+
+  &__container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.services {
+  color: #202020;
+  background-color: #fff;
+  padding: 58px 0 122px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 47px;
+  }
+
+  &__container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__pagination {
+    margin-top: 83px;
+  }
+}
+
+.partners {
+  color: #202123;
+  background-color: #f4f5f5;
+  padding: 95px 0 115px;
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 75px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -46px;
+  }
+
+  &__item {
+    margin-left: 46px;
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    width: 250px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}

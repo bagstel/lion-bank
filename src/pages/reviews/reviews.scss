@@ -1,0 +1,151 @@
+@import "../../styles/base.scss";
+
+@import "../../components/header.scss";
+@import "../../components/footer.scss";
+
+@import "../../components/button.scss";
+@import "../../components/logo/logo.scss";
+@import "../../components/contacts/contacts.scss";
+@import "../../components/menu/menu.scss";
+@import "../../components/socials/socials.scss";
+@import "../../components/breadcrumbs/breadcrumbs.scss";
+@import "../../components/pagination/pagination.scss";
+
+@import "../../components/review/review.scss";
+@import "../../components/avatar/avatar.scss";
+@import "../../components/tag/tag.scss";
+
+.top-line {
+  min-height: 415px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 26px;
+  padding-bottom: 27px;
+  background: #202123 url('images/bg/lion-head-wide.jpg') right 28% bottom no-repeat;
+
+  &__container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.reviews {
+  background-color: #fff;
+  padding: 98px 0;
+
+  &__list {
+    column-count: 2;
+    column-gap: 30px;
+    overflow: hidden;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    display: inline-flex;
+  }
+}
+
+.banner {
+  color: #202020;
+  background-color: #E5C288;
+
+  &__content {
+    min-height: 363px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../../images/decor/phone-n-hand.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom -133px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    max-width: 48%;
+  }
+}
+
+.feedback {
+  color: #202020;
+  background-color: #F4F5F5;
+  padding: 72px 0 98px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10px;
+  margin-left: -10px;
+
+  &__item {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  &__elem {
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked ~ .tag {
+      background-color: #B9EAE4;
+    }
+  }
+}
+
+.form {
+  &__row {
+    display: flex;
+    margin-bottom: 26px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    flex: 1;
+    margin-right: 30px;
+    border-radius: 4px;
+    border: none;
+    background-color: #fff;
+    padding: 22px 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::placeholder {
+      color: #666666;
+    }
+
+    &--textarea {
+      height: 232px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+
+  &__controls-title {
+    flex: 1 0 30%;
+    margin-right: 20px;
+  }
+
+  &__buttons {
+    text-align: right;
+    
+    & > button + button {
+      margin-left: 22px;
+    }
+  }
+}

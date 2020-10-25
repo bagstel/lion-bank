@@ -1,0 +1,28 @@
+.breadcrumbs {
+  font-size: 1.4rem;
+  
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-right: 3px;
+
+    &:not(:last-child)::after {
+      content: '/';
+      color: #999;
+      margin-left: 3px;
+    }
+  }
+
+  &__item.active > &__link {
+    font-weight: 700;
+  }
+
+  &__link {
+    color: #9A9A9A;
+  }
+}

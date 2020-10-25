@@ -1,0 +1,56 @@
+.promotion {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  padding-top: 70.61%;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(#000, 0.35);
+    z-index: 1;
+  }
+
+  &__cover {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    max-width: initial;
+    max-height: initial;
+    height: 100%;
+  }
+
+  &__content {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 31px;
+    min-height: 170px;
+  }
+
+  &__date {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    text-transform: lowercase;
+  }
+}

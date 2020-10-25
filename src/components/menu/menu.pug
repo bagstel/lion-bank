@@ -1,0 +1,6 @@
+mixin menu(currentPage)
+  nav.menu
+    ul.menu-list
+      each item, index in data.menu
+        li(class=`${index === currentPage ? 'menu-item current-menu-item' : 'menu-item'}`)
+          a(href=item.href)= item.title

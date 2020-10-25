@@ -1,0 +1,91 @@
+@import "../../styles/base.scss";
+
+@import "../../components/header.scss";
+@import "../../components/footer.scss";
+
+@import "../../components/button.scss";
+@import "../../components/logo/logo.scss";
+@import "../../components/contacts/contacts.scss";
+@import "../../components/menu/menu.scss";
+@import "../../components/intro/intro.scss";
+@import "../../components/offer/offer.scss";
+@import "../../components/promotion/promotion.scss";
+@import "../../components/pagination/pagination.scss";
+@import "../../components/card/card.scss";
+@import "../../components/socials/socials.scss";
+
+.main-page-wrapper {
+  background: url('images/bg/lion-header.jpg') top center no-repeat, url('images/bg/bottom-pic.png') bottom 307px right no-repeat;
+}
+
+.hero {
+  padding-top: 25px;
+  margin-bottom: 17rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 585px;
+  }
+
+  &__content {
+    width: 43%;
+    padding: 20px 0;
+  }
+}
+
+.offers {
+  padding: 0 0 13.2rem;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    flex: 1;
+    margin-right: 2.4%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.promotions {
+  padding: 0 0 14.6rem;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    flex: 1;
+    margin-right: 2.1%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__pagination {
+    margin-top: 52px;
+  }
+}
+
+.about {
+  margin-bottom: 5.8rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-image: url('images/chess.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 490px 505px;
+    padding-top: 100px;
+  }
+}

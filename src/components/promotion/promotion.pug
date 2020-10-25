@@ -1,0 +1,7 @@
+mixin promotion(item)
+  .promotion
+    +image(item.image, 'promotion__cover', 'alt')
+    .promotion__content
+      time.promotion__date= item.date
+      .promotion__title= item.title
+      .promotion__description= item.description

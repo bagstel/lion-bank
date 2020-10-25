@@ -1,0 +1,41 @@
+extends ../../layouts/default.pug
+
+block title
+  title Lion Bank | Services Page
+
+block content
+  .wrapper
+    section.top-line
+      .container.top-line__container
+        header.header
+          .header__cell
+            +logo
+            +menu(1)
+          .header__cell
+            +contacts('header')
+        h1.page-title Услуги
+        +breadcrumbs
+    main.services
+      .services__container
+        ul.services__list
+          each item in data['services']
+            li.services__item
+              +service(item)
+        .services__pagination
+          +pagination('dark')
+    section.partners
+      .container
+        h2.partners__title Партнеры
+        ul.partners__list
+          each item in data.partners
+            li.partners__item
+              a(href= item.link).partners__link
+                +image(item.image, '', item.alt)
+    footer.footer
+      .container.footer__container
+        .footer__cell
+          +logo
+          +menu(1)
+        .footer__cell
+          +socials
+          +contacts('footer')

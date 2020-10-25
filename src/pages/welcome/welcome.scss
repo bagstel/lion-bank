@@ -1,0 +1,64 @@
+@import "../../styles/base.scss";
+
+@import "../../components/button.scss";
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('../../images/bg/splash.jpg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: bounce 1.5s 0.3s forwards;
+
+  &__logo {
+    margin-bottom: 59px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-30px);
+  }
+
+  35% {
+    transform: translateY(0);
+  }
+
+  55% {
+    transform: translateY(-15px);
+  }
+
+  65% {
+    transform: translateY(0);
+  }
+
+  70% {
+    transform: translateY(-4px);
+  }
+
+  80% {
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

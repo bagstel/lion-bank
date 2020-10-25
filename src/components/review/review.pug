@@ -1,0 +1,15 @@
+mixin review(data)
+  .review
+    .review__header
+      .review__photo
+        +avatar(data['avatar'].src, '', data['avatar'].alt)
+      .review__userdata
+        a(href="#").review__user= data.user
+        ul.review__tags
+          each item in data.tags
+            li.review__tags-item
+              +tag(item, 'green')
+    .review__content
+      h4.review__title= data.title
+      .review__description !{data.description}
+      time.review__date= data.time

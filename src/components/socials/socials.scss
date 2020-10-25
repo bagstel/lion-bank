@@ -1,0 +1,37 @@
+.socials {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: #454545;
+    border-radius: 50%;
+    transition: background-color 0.3s linear, fill 0.3s linear;
+
+    svg {
+      width: 60%;
+      fill: #29282d;
+    }
+
+    &:hover {
+      background-color: #7d7d7d;
+
+      svg {
+        fill: #29292b;
+      }
+    }
+  }
+}

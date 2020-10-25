@@ -1,0 +1,9 @@
+mixin service(item)
+  a(href="#").service
+    .service__img
+      +image(item.image.src, 'service__img-elem', item.image.alt)
+    .service__content
+      h2.service__title= item.title
+      .service__description
+        p= item.description
+      .btn.btn--color--black.service__btn Подробнее

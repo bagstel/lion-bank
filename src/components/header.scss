@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // padding: 45px 0 30px;
+
+  &__cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > .logo + .menu {
+      margin-left: 92px;
+    }
+  }
+}

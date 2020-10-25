@@ -1,0 +1,28 @@
+.menu {
+  font-size: 1.4rem;
+
+  &-list {
+    display: flex;
+  }
+
+  &-item {
+    margin-right: 55px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-item a {
+    text-decoration: none;
+    transition: color .3s linear;
+
+    &:hover {
+      color: #dfb56d;
+    }
+  }
+}
+
+.current-menu-item {
+  color: #dfb56d;
+}

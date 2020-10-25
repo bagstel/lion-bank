@@ -1,0 +1,17 @@
+.card {
+  background-color: #202123;
+  border-radius: 5px;
+  padding: 7.3rem 8rem 6.3rem;
+  width: 785px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 41px;
+  }
+
+  &__content {
+    margin-bottom: 70px;
+    line-height: 27px;
+  }
+}

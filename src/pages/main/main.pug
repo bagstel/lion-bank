@@ -1,0 +1,44 @@
+extends ../../layouts/default.pug
+
+block title
+  title Lion Bank | Main Page
+
+block content
+  .wrapper.main-page-wrapper
+    section.hero
+      .container.hero__container
+        header.header
+          .header__cell
+            +logo
+            +menu(0)
+          .header__cell
+            +contacts('header')
+        .hero__content
+          +intro
+    section.offers
+      .container
+        h2.section-title Лучшие предложения банка
+        ul.offers__list
+          each item in data['offers']
+            li.offers__item
+              +offer(item)
+    section.promotions
+      .container
+        h2.section-title Новости и акции
+        ul.promotions__list
+          each item in data['promotions']
+            li.promotions__item
+              +promotion(item)
+        .promotions__pagination
+          +pagination
+    section.about
+      .container.about__container
+        +card(data['about'].title, data['about'].content)
+    footer.footer.footer--main
+      .container.footer__container
+        .footer__cell
+          +logo
+          +menu(0)
+        .footer__cell
+          +socials
+          +contacts('footer')

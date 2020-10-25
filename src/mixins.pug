@@ -1,0 +1,24 @@
+include ./components/logo/logo.pug
+include ./components/menu/menu.pug
+include ./components/socials/socials.pug
+include ./components/contacts/contacts.pug
+
+include ./components/intro/intro.pug
+include ./components/offer/offer.pug
+include ./components/promotion/promotion.pug
+include ./components/pagination/pagination.pug
+include ./components/card/card.pug
+include ./components/breadcrumbs/breadcrumbs.pug
+include ./components/service/service.pug
+
+include ./components/review/review.pug
+include ./components/avatar/avatar.pug
+include ./components/tag/tag.pug
+
+mixin icon(name, className)
+  - var icon = require(`images/icons/${name}.svg`).default;
+  svg(class=className viewBox=icon.viewBox preserveAspectRatio="none")
+    use(xlink:href=`sprite.svg#${icon.id.replace('-usage', '')}`)
+
+mixin image(path, className, alt)
+  img(src=require(`images/${path}`).default class=className alt=alt)

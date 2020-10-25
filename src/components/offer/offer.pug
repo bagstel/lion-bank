@@ -1,0 +1,13 @@
+mixin offer(item)
+  div(class=`offer offer--theme--${item.theme}`)
+    .offer__header
+      +image(item.image, 'offer__image', 'alt')
+    .offer__content
+      h3.offer__title= item.title
+      .offer__prices
+        each price in item.prices
+          .offer__prices-cell
+            .offer__price= price.price
+            .offer__price-description= price.description
+      .offer__button
+        a(href="#").btn.btn--color--black Подробнее

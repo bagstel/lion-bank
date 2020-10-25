@@ -1,0 +1,3 @@
+mixin tag(value, mode)
+  - var className = mode ? `tag tag--bg--${mode}` : 'tag'
+  div(class= className)= value

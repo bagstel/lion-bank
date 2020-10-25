@@ -1,0 +1,11 @@
+mixin contacts(position)
+  address.contacts
+    - if (position === "footer") {
+      .contacts__title Бесплатный звонок по России
+    - }
+      
+    a(href="tel:+78007003030").contacts__phone 8 800 700 30 30
+
+    - if (position === "header") {
+      .contacts__dropdown-title График работы
+    - }

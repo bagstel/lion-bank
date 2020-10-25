@@ -1,0 +1,8 @@
+mixin pagination(theme)
+  div(class= theme ? `pagination pagination--theme--${theme}` : 'pagination')
+    .pagination__display Страница 1 из 7
+    ul.pagination__list
+      - for (let index = 0; index < 7; index++) {
+        li.pagination__item
+          button(type="button" class= !index ? 'pagination__btn active' : 'pagination__btn')= index + 1
+      - }

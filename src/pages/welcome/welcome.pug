@@ -1,0 +1,11 @@
+extends ../../layouts/default.pug
+
+block title
+  title Lion Bank | Welcome Page
+
+block content
+  .welcome
+    .welcome__container
+      .central
+        +image('logo-vertical.png', 'central__logo', 'lion bank logo')
+        a(href="/").btn.btn--color--ginger войти

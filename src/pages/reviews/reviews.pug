@@ -1,0 +1,59 @@
+extends ../../layouts/default.pug
+
+block title
+  title Lion Bank | Reviews Page
+
+block content
+  .wrapper
+    section.top-line
+      .container.top-line__container
+        header.header
+          .header__cell
+            +logo
+            +menu(2)
+          .header__cell
+            +contacts('header')
+        h1.page-title Отзывы
+        +breadcrumbs
+    
+    main.reviews
+      .container
+        ul.reviews__list
+          each item in data.reviews
+            li.reviews__item
+              +review(item)
+        +pagination('dark')
+    
+    section.banner
+      .container
+        .banner__content
+          h2.banner__title LionBank-Онлайн Простой способ зайти в банк
+
+    section.feedback
+      .container
+        h2.feedback__title Оставьте отзыв
+        form.form
+          .form__row
+            input(type="text", placeholder="Ваше ФИО", class="form__input")
+            input(type="text", placeholder="Ссылка на профиль VK", class="form__input")
+          .form__row
+            textarea(class="form__input form__input--textarea")
+          .form__controls
+            .form__controls-title Какими услугами банка пользуетесь?
+            ul.controls
+              each item in data.form_tags
+                li.controls__item
+                  label.controls__elem
+                    input(type="checkbox").controls__checkbox
+                    +tag(item)
+          .form__buttons
+            button(type="reset").btn.btn--color--grey Очистить
+            button(type="submit").btn.btn--color--black Отправить
+    footer.footer
+      .container.footer__container
+        .footer__cell
+          +logo
+          +menu(2)
+        .footer__cell
+          +socials
+          +contacts('footer')

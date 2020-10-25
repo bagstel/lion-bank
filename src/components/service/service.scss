@@ -1,0 +1,41 @@
+.service {
+  display: flex;
+  padding: 3.7rem 3rem 2.2rem;
+  text-decoration: none;
+  transition: all 0.3s linear;
+
+  &__img {
+    display: flex;
+    width: 460px;
+    height: 333px;
+    margin-right: 58px;
+  
+    &-elem {
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__description {
+    line-height: 1.7;
+    margin-bottom: 49px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 5rem;
+  }
+
+  &:hover {
+    background-color: #F5F5F5;
+  }
+
+  &:hover &__btn {
+    background-color: #dfb65d;
+  }
+}

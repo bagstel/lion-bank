@@ -1,0 +1,30 @@
+.footer {
+  margin-top: auto;
+  
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 43px 0;
+  }
+
+  &--main > &__container {
+    border-top: 1px solid #353538;
+    padding: 42px 0 57px;
+  }
+
+  &__cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > .logo + .menu {
+      margin-left: 90px;
+    }
+    
+    > .socials + .contacts {
+      margin-left: 74px;
+    }
+  }
+}
+
